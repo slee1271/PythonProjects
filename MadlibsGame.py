@@ -1,4 +1,3 @@
-
 adj1 = input("Enter an adjective (description): ")
 noun = input("Enter a noun (person, place, thing): ")
 adj2 = input("Enter an adjective (description): ")
