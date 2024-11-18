@@ -29,13 +29,11 @@ def display_man(wrong_guesses):
         print(line)
     print()
 
-
 def display_hint(hint):
     print(" ".join(hint))
 
 def display_answer(answer):
     print(" ".join(answer))
-
 
 def main():
     answer = random.choice(words)
@@ -47,6 +45,7 @@ def main():
     while is_running:
         display_man(wrong_guesses)
         display_hint(hint)
+        print(f"Guessed letters: {', '.join(sorted(guessed_letters))}")  # Show guessed letters
         guess = input("Enter a letter: ").lower()
 
         if len(guess) != 1 or not guess.isalpha():
@@ -61,7 +60,7 @@ def main():
         if guess in answer: 
             for i in range(len(answer)):
                 if answer[i] == guess:
-                    hint [i] = guess
+                    hint[i] = guess
         else:
             wrong_guesses += 1
 
